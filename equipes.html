@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratoire d'Informatique Intelligente (LINFI) | Ã‰quipes de Recherche</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="DÃ©couvrez les Ã©quipes de recherche du Laboratoire LINFI de l'UniversitÃ© de Biskra: IADAW, CoViBio, GLSIA, SIGTI, SCID.">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Section specific style for directory layout */
+        .teams-directory {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .team-dir-card {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 25px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            align-items: center;
+        }
+        .team-dir-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+        .team-dir-photo-wrapper {
+            width: 100%;
+            height: 220px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+        .team-dir-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-dir-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .team-dir-name {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .team-dir-chef {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-hover);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .team-dir-desc {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .team-dir-action {
+            align-self: flex-start;
+            background-color: var(--primary-color);
+            color: #ffffff !important;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+        .team-dir-action:hover {
+            background-color: var(--primary-hover);
+            box-shadow: var(--shadow-md);
+        }
+        @media (max-width: 768px) {
+            .team-dir-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+            .team-dir-photo-wrapper {
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+            .team-dir-chef {
+                justify-content: center;
+            }
+            .team-dir-action {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <!-- Premium Top Bar -->
+        <div class="site-top-bar">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-graduation-cap"></i> UniversitÃ© Mohamed Khider Biskra</span>
+                <span class="top-bar-sep">|</span>
+                <span>FacultÃ© des Sciences Exactes et SNV</span>
+            </div>
+            <div class="top-bar-right">
+        <a href="http://univ-biskra.dz" target="_blank"><i class="fa-solid fa-globe"></i> Portail Univ</a>
+      </div>
+        </div>
+
+        <!-- Top Site Header -->
+
+        <header class="site-header">
+            <div class="header-left">
+                <img src="assets/images/robot_head.png" alt="Robot Head" class="robot-graphic">
+                <div class="title-container">
+                    <h1>Laboratoire d'Informatique Intelligente</h1>
+                    <p>UniversitÃ© Mohamed Khider de Biskra</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="assets/images/linfi.bmp" alt="LINFI Logo" class="linfi-logo">
+            </div>
+        </header>
+
+        <!-- Main Navigation Menu -->
+
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">PrÃ©sentation</a></li>
+                <li class="dropdown">
+                    <a href="equipes.html" class="active">Equipes de Recherche <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.75rem; margin-left: 2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="equipe-iadaw.html">Equipe IADAW</a></li>
+                        <li><a href="equipe-covibio.html">Equipe CoViBio</a></li>
+                        <li><a href="equipe-glsia.html">Equipe GLSIA</a></li>
+                        <li><a href="equipe-sigti.html">Equipe SIGTI</a></li>
+                        <li><a href="equipe-scid.html">Equipe SCID</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Layout Grid Container -->
+
+        <div class="content-wrapper">
+
+            <!-- Main Column Content (72%) -->
+
+            <main class="main-content" style="grid-column: 1 / span 2;">
+                <h2 class="page-title">Nos Ã‰quipes de Recherche</h2>
+                <p class="page-subtitle"><i class="fa-solid fa-people-group" style="margin-right: 6px;"></i> Le
+                    laboratoire LINFI regroupe 5 Ã©quipes thÃ©matiques spÃ©cialisÃ©es en informatique intelligente</p>
+                <div class="teams-directory">
+
+                    <!-- Team 1: IADAW -->
+                    <div class="team-dir-card">
+                        <div class="team-dir-photo-wrapper">
+                            <img src="assets/images/Mdm_Saouli.png" alt="Pr. SAOULI Rachida" class="team-dir-photo">
+                        </div>
+                        <div class="team-dir-info">
+
+                            <h3 class="team-dir-name">Ã‰quipe IADAW</h3>
+                            <div class="team-dir-chef">
+                                <i class="fa-solid fa-user-tie"></i> Chef d'Ã©quipe : Pr. SAOULI Rachida
+                            </div>
+                            <p class="team-dir-desc">
+                                Lâ€™Ã©quipe IADAW (Intelligence Artificielle DistribuÃ©e et Applications Web) traite des
+                                problÃ©matiques avancÃ©es relatives Ã  l'intelligence artificielle distribuÃ©e, aux
+                                environnements de cloud computing, aux architectures e-learning/m-learning sÃ©mantiques,
+                                Ã  la cybersÃ©curitÃ© des systÃ¨mes d'informations complexes ainsi qu'au paradigme agent
+                                mobile.
+                            </p>
+                            <a href="equipe-iadaw.html" class="team-dir-action">En savoir plus <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team 2: CoViBio -->
+                    <div class="team-dir-card">
+                        <div class="team-dir-photo-wrapper">
+                            <img src="assets/images/labib.png" alt="Pr. TERRISSA Sadek Labib" class="team-dir-photo">
+                        </div>
+                        <div class="team-dir-info">
+
+                            <h3 class="team-dir-name">Ã‰quipe CoViBio</h3>
+                            <div class="team-dir-chef">
+                                <i class="fa-solid fa-user-tie"></i> Chef d'Ã©quipe : Pr. TERRISSA Labib Sadek
+                            </div>
+                            <p class="team-dir-desc">
+                                Lâ€™Ã©quipe CoViBio (Computer Vision and Biological Cybernetics) concentre ses recherches
+                                sur les architectures intelligentes pervasives. Elle allie cloud computing, cloud
+                                robotics, maintenance prÃ©visionnelle (PHM), Internet des objets (IoT), vision
+                                artificielle et techniques d'apprentissage automatique (Machine Learning) pour des
+                                applications concrÃ¨tes en agro-industrie, transport et santÃ©.
+                            </p>
+                            <a href="equipe-covibio.html" class="team-dir-action">En savoir plus <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team 3: GLSIA -->
+                    <div class="team-dir-card">
+                        <div class="team-dir-photo-wrapper">
+                            <img src="assets/images/kahloul.png" alt="Pr. KAHLOUL Laid" class="team-dir-photo">
+                        </div>
+                        <div class="team-dir-info">
+
+                            <h3 class="team-dir-name">Ã‰quipe GLSIA</h3>
+                            <div class="team-dir-chef">
+                                <i class="fa-solid fa-user-tie"></i> Chef d'Ã©quipe/Directeur : Pr. KAHLOUL Laid
+                            </div>
+                            <p class="team-dir-desc">
+                                Lâ€™Ã©quipe GLSIA (GÃ©nie Logiciel et SystÃ¨mes Informatiques AvancÃ©s) focalise ses efforts
+                                de recherche sur la spÃ©cification et la vÃ©rification formelle des systÃ¨mes distribuÃ©s,
+                                le dÃ©veloppement de langages et de nouveaux formalismes, la composition automatique des
+                                services Web sÃ©mantiques sensibles aux contextes ainsi que les infrastructures pour
+                                l'Internet des objets (IoT).
+                            </p>
+                            <a href="equipe-glsia.html" class="team-dir-action">En savoir plus <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team 4: SIGTI -->
+                    <div class="team-dir-card">
+                        <div class="team-dir-photo-wrapper">
+                            <img src="assets/images/khaled.jpg" alt="Pr. REZEG Khaled" class="team-dir-photo">
+                        </div>
+                        <div class="team-dir-info">
+
+                            <h3 class="team-dir-name">Ã‰quipe SIGTI</h3>
+                            <div class="team-dir-chef">
+                                <i class="fa-solid fa-user-tie"></i> Chef d'Ã©quipe : Pr. REZEG Khaled
+                            </div>
+                            <p class="team-dir-desc">
+                                Lâ€™Ã©quipe SIGTI (SystÃ¨mes d'Information GÃ©ographique et Technologies de l'Information)
+                                propose des solutions algorithmiques pour optimiser l'exploitation des services Web
+                                gÃ©ographiques, le commerce mobile et les systÃ¨mes embarquÃ©s en temps rÃ©el. Leurs travaux
+                                couvrent la technologie multi-agents et le traitement automatique du langage naturel
+                                (TALN).
+                            </p>
+                            <a href="equipe-sigti.html" class="team-dir-action">En savoir plus <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team 5: SCID -->
+                    <div class="team-dir-card">
+                        <div class="team-dir-photo-wrapper">
+                            <img src="assets/images/ALOUI_Ahmed.jpg" alt="Dr. ALOUI Ahmed" class="team-dir-photo">
+                        </div>
+                        <div class="team-dir-info">
+
+                            <h3 class="team-dir-name">Ã‰quipe SCID</h3>
+                            <div class="team-dir-chef">
+                                <i class="fa-solid fa-user-tie"></i> Chef d'Ã©quipe : Dr. ALOUI Ahmed
+                            </div>
+                            <p class="team-dir-desc">
+                                L'Ã©quipe SCID (SystÃ¨mes ConnectÃ©s Intelligents et Digitaux) innove dans la conception de
+                                solutions numÃ©riques avancÃ©es pour la numÃ©risation durable. Ses travaux couvrent les
+                                services gÃ©olocalisÃ©s sÃ©curisÃ©s, la dÃ©tection automatique d'anomalies en
+                                vidÃ©osurveillance intelligente via l'IA, les systÃ¨mes multi-agents distribuÃ©s et le
+                                dÃ©veloppement de drones et robots camouflÃ©s solaires autonomes.
+                            </p>
+                            <a href="equipe-scid.html" class="team-dir-action">En savoir plus <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Premium Multi-Column Footer -->
+
+        <footer class="site-footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+
+                    <h3><i class="fa-solid fa-microscope" style="color: var(--accent-color); margin-right: 8px;"></i>Laboratoire LINFI</h3>
+                    <p>Le Laboratoire de l'INFormatique Intelligente regroupe des enseignants-chercheurs et des doctorants autour de thématiques couvrant l'intelligence artificielle, la vision par ordinateur, le génie logiciel et les systèmes connectés.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="presentation.html">Présentation</a></li>
+                        <li><a href="equipes.html">Équipes de Recherche</a></li>
+                        <li><a href="http://univ-biskra.dz" target="_blank">Site de l'Université</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Université Mohamed Khider, BP 145 RP, 07000 Biskra, Algérie</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>00(213) 33 54 33 24</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>rachida.saouli@univ-biskra.dz</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Laboratoire LINFI — Université Mohamed Khider de Biskra. Tous droits réservés.</p>
+                <p>Conçu par <a href="#">LINFI Lab</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 300);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

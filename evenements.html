@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratoire d'Informatique Intelligente (LINFI) | Événements</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Découvrez les événements, séminaires et conférences organisés par le Laboratoire de l'INFormatique Intelligente (LINFI).">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="site-wrapper">
+
+        <!-- Premium Top Bar -->
+        <div class="site-top-bar">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-graduation-cap"></i> Université Mohamed Khider Biskra</span>
+                <span class="top-bar-sep">|</span>
+                <span>Faculté des Sciences Exactes et SNV</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="http://univ-biskra.dz" target="_blank"><i class="fa-solid fa-globe"></i> Portail Univ</a>
+            </div>
+        </div>
+
+        <!-- Top Site Header -->
+        <header class="site-header">
+            <div class="header-left">
+                <img src="assets/images/robot_head.png" alt="Robot Head" class="robot-graphic">
+                <div class="title-container">
+                    <h1>Laboratoire d'Informatique Intelligente</h1>
+                    <p>Université Mohamed Khider de Biskra</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="assets/images/linfi.bmp" alt="LINFI Logo" class="linfi-logo">
+            </div>
+        </header>
+
+        <!-- Main Navigation Menu -->
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="evenements.html" class="active">Nos Événements</a></li>
+                <li class="dropdown">
+                    <a href="equipes.html">Equipes de Recherche <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.75rem; margin-left: 2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="equipe-iadaw.html">Equipe IADAW</a></li>
+                        <li><a href="equipe-covibio.html">Equipe CoViBio</a></li>
+                        <li><a href="equipe-glsia.html">Equipe GLSIA</a></li>
+                        <li><a href="equipe-sigti.html">Equipe SIGTI</a></li>
+                        <li><a href="equipe-scid.html">Equipe SCID</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ===== Breadcrumb Navigation ===== -->
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a>
+            <span class="sep">&gt;</span>
+            <span class="current">Nos Événements</span>
+        </div>
+
+        <!-- Layout Grid Container -->
+        <div class="content-wrapper">
+
+            <!-- Main Column Content (72%) -->
+            <main class="main-content">
+                <h2 class="page-title">Événements du Laboratoire LINFI</h2>
+                <p class="page-subtitle"><i class="fa-regular fa-calendar-days" style="margin-right: 6px;"></i>
+                    Découvrez notre agenda scientifique et nos rencontres</p>
+
+                <p class="main-text">
+                    Le laboratoire LINFI organise et participe régulièrement à des séminaires, conférences
+                    scientifiques, hackathons et journées d'étude visant à promouvoir l'avancement technologique de
+                    l'intelligence artificielle, des systèmes distribués, de l'Internet des objets et de la
+                    cybersécurité.
+                </p>
+
+                <!-- Premium Event Filter Controls (Rich Aesthetics) -->
+                <div
+                    style="margin-top: 25px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px;">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin: 0;"><i
+                            class="fa-solid fa-list-check"
+                            style="color: var(--accent-color); margin-right: 8px;"></i>Liste de nos événements</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="eventSearch" placeholder="Rechercher un événement..."
+                            style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); font-size: 0.88rem; outline: none; transition: var(--transition-fast); width: 220px;"
+                            onkeyup="filterEvents()">
+                    </div>
+                </div>
+
+                <!-- Scrollable List Pane -->
+                <div class="events-list-container" id="eventsContainer">
+
+                    <!-- Event 1 (Clickable Card) -->
+                    <div class="event-item clickable-card"
+                        onclick="window.location.href='evenement-conferences-2025.html'"
+                        data-title="Conférences scientifiques en informatique"
+                        data-desc="série de conférences scientifiques organisée par le Laboratoire de l'Informatique Intelligente (LINFI). Ces sessions se penchent sur les thèmes éthiques, de sécurité et d'originalité du codage.">
+                        <h3 class="event-title">Conférences scientifiques en informatique organisées par le laboratoire
+                            LINFI</h3>
+                        <p class="event-preview">Série de conférences scientifiques organisée par le Laboratoire de
+                            l'Informatique Intelligente (LINFI) au Centre Audiovisuel de l'Université Centrale. Cette
+                            activité s'inscrit dans le cadre du programme de l'École Doctorale d'Informatique. Les
+                            thèmes abordés incluent l'utilisation sûre, responsable et éthique des technologies de
+                            l'intelligence artificielle, ainsi que la cybersécurité dans l'industrie.</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 17 septembre 2025 – Centre Audiovisuel, Université de
+                            Biskra
+                        </div>
+                        <div class="read-more-link"
+                            style="margin-top: 10px; font-weight: 600; font-size: 0.85rem; color: #3b82f6; display: flex; align-items: center; gap: 6px;">
+                            <span>Lire l'article complet</span> <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-item" data-title="Séminaire Inter-Équipes LINFI 2025"
+                        data-desc="rencontre annuelle de recherche où chaque équipe (IADAW, CoViBio, GLSIA, SIGTI, SCID) présente ses avancements scientifiques récents, ses projets en cours et ses futures collaborations.">
+                        <h3 class="event-title">Séminaire Inter-Équipes LINFI 2025</h3>
+                        <p class="event-preview">Rencontre annuelle de recherche où chaque équipe (IADAW, CoViBio,
+                            GLSIA, SIGTI, SCID) présente ses avancements scientifiques récents, ses projets en cours et
+                            ses futures collaborations. C'est l'occasion idéale pour favoriser la synergie
+                            inter-thématique et renforcer les coopérations de recherche nationales.</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 12 novembre 2025 – Salle de Réunions LINFI,
+                            Université de Biskra
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-item" data-title="Workshop sur l'Internet des Objets et Drones Autonomes"
+                        data-desc="atelier pratique organisé par l'équipe SCID et CoViBio. Démonstrations en direct de drones camouflés solaires autonomes et systèmes d'intelligence artificielle embarqués.">
+                        <h3 class="event-title">Workshop sur l'Internet des Objets et Drones Autonomes</h3>
+                        <p class="event-preview">Atelier pratique co-organisé par l'équipe SCID et CoViBio. Cet
+                            événement présentera des démonstrations en direct de drones camouflés solaires autonomes et
+                            de systèmes d'intelligence artificielle embarqués pour la surveillance environnementale et
+                            agricole. Les doctorants sont encouragés à participer.</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 05 janvier 2026 – Hall Technologique, Faculté des
+                            Sciences Exactes
+                        </div>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="event-item"
+                        data-title="Journée d'étude sur la Cybersécurité Industrielle et Web Sémantique"
+                        data-desc="journée d'analyse approfondie organisée par l'équipe GLSIA et IADAW. Au programme, des conférences sur les protocoles de détection d'intrusions par IA et l'interopérabilité des ERP sémantiques.">
+                        <h3 class="event-title">Journée d'étude sur la Cybersécurité Industrielle et Web Sémantique</h3>
+                        <p class="event-preview">Journée d'analyse approfondie en collaboration avec des partenaires
+                            socio-économiques industriels. Les présentations traiteront des protocoles de détection
+                            d'intrusions basés sur l'IA, de la sécurité du Cloud Computing, et de l'intégration
+                            sémantique des données géospatiales pour la cybersécurité.</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 24 février 2026 – Amphithéâtre des Sciences,
+                            Université de Biskra
+                        </div>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="event-item" data-title="Soutenance de Thèses de Doctorat en Informatique"
+                        data-desc="soutenances publiques de doctorants du laboratoire LINFI. Présentations des résultats finaux des thèses axées sur le Deep Learning pour l'imagerie médicale et la modélisation à base d'agents.">
+                        <h3 class="event-title">Soutenance de Thèses de Doctorat en Informatique</h3>
+                        <p class="event-preview">Soutenances publiques de plusieurs doctorants du laboratoire LINFI
+                            soutenant leurs thèses de Doctorat en Informatique LMD. Les travaux portent principalement
+                            sur le Deep Learning appliqué à l'imagerie médicale, la composition automatique des services
+                            Web et les systèmes de transport intelligents.</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 15 avril 2026 – Salle des Conférences, Université de
+                            Biskra
+                        </div>
+                    </div>
+
+                    <!-- Event 6 -->
+                    <div class="event-item" data-title="Hackathon Étudiant 'Smart Campus Biskra'"
+                        data-desc="compétition de codage de 48 heures organisée par le LINFI pour concevoir des applications mobiles intelligentes et solutions écologiques pour l'Université de Biskra.">
+                        <h3 class="event-title">Hackathon Étudiant "Smart Campus Biskra"</h3>
+                        <p class="event-preview">Une compétition intensive de développement logiciel d'une durée de 48
+                            heures ouverte à tous les étudiants de Master et de Licence de la faculté. L'objectif est de
+                            concevoir des prototypes d'applications intelligentes pour faciliter la vie universitaire
+                            (M-learning, gestion d'énergie, navigation de campus).</p>
+                        <div class="event-date">
+                            <i class="fa-regular fa-calendar"></i> 10 au 12 mai 2026 – Bibliothèque Centrale, Université
+                            de Biskra
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    // Live search filter implementation
+                    function filterEvents() {
+                        const searchInput = document.getElementById('eventSearch').value.toLowerCase();
+                        const events = document.getElementsByClassName('event-item');
+
+                        for (let i = 0; i < events.length; i++) {
+                            const title = events[i].getAttribute('data-title').toLowerCase();
+                            const desc = events[i].getAttribute('data-desc').toLowerCase();
+
+                            if (title.includes(searchInput) || desc.includes(searchInput)) {
+                                events[i].style.display = 'block';
+                            } else {
+                                events[i].style.display = 'none';
+                            }
+                        }
+                    }
+                </script>
+
+            </main>
+
+            <!-- Sidebar Column (28%) -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Directrice</h4>
+                    <div class="profile-card">
+                        <div class="profile-avatar-wrapper">
+                            <img src="assets/images/Prof Rachida Benabdelaziz EP Saouli  Directrice du laboratoire LINFI.png"
+                                alt="Prof. Rachida Benabdelaziz EP Saouli" class="profile-avatar">
+                        </div>
+                        <h5 class="profile-name">Pr. Rachida Saouli</h5>
+                        <p class="profile-role">Directrice du laboratoire LINFI</p>
+                        <div class="profile-info">
+                            <div class="profile-info-item">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <span>Université de Biskra</span>
+                            </div>
+                            <div class="profile-info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span
+                                    style="word-break: break-all; font-size: 0.8rem;">rachida.saouli@univ-biskra.dz</span>
+                            </div>
+                            <div class="profile-info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>00(213)33543324</span>
+                            </div>
+                        </div>
+                        <div class="profile-socials">
+                            <a href="https://scholar.google.com/citations?user=p-oLahUAAAAJ&hl=fr" target="_blank"
+                                class="social-btn"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+                            <a href="https://www.researchgate.net/profile/Rachida-Saouli" target="_blank"
+                                class="social-btn"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Menu Rapide</h4>
+                    <ul class="styled-list" style="margin-bottom: 0;">
+                        <li><a href="presentation.html">À propos de LINFI</a></li>
+                        <li><a href="equipes.html">Nos 5 Équipes de recherche</a></li>
+                        <li><a href="http://lab.univ-biskra.dz/linfi" target="_blank">Site de l'Université</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Premium Multi-Column Footer -->
+        <footer class="site-footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><i class="fa-solid fa-microscope"
+                            style="color: var(--accent-color); margin-right: 8px;"></i>Laboratoire LINFI</h3>
+                    <p>Le Laboratoire de l'INFormatique Intelligente regroupe des enseignants-chercheurs et des
+                        doctorants autour de thématiques couvrant l'intelligence artificielle, la vision par ordinateur,
+                        le génie logiciel et les systèmes connectés. Rattaché à l'Université Mohamed Khider de Biskra.
+                    </p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="presentation.html">Présentation</a></li>
+                        <li><a href="evenements.html">Nos Événements</a></li>
+                        <li><a href="equipes.html">Équipes de Recherche</a></li>
+                        <li><a href="http://univ-biskra.dz" target="_blank">Site de l'Université</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Université Mohamed Khider, BP 145 RP, 07000 Biskra, Algérie</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>00(213) 33 54 33 24</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>rachida.saouli@univ-biskra.dz</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Laboratoire LINFI — Université Mohamed Khider de Biskra. Tous droits réservés.</p>
+                <p>Conçu par <a href="#">LINFI Lab</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 300);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

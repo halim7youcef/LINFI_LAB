@@ -1295,3 +1295,104 @@ button:focus-visible {
   color: #ffffff !important;
   background-color: var(--nav-hover-bg) !important;
 }
+
+/* ===== Events List Custom Page Styling ===== */
+.events-list-container {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 15px;
+  margin-top: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Custom Scrollbar for the event list to ensure premium rightside scroll bar */
+.events-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-list-container::-webkit-scrollbar-track {
+  background: var(--bg-body);
+  border-radius: 4px;
+}
+
+.events-list-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.events-list-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.event-item {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-item:hover {
+  background-color: var(--primary-light);
+  border-radius: var(--border-radius-sm);
+}
+
+.event-title {
+  color: var(--primary-color) !important;
+  /* blue title color */
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.event-title a {
+  color: var(--primary-color);
+  transition: var(--transition-fast);
+}
+
+.event-title a:hover {
+  color: var(--primary-dark);
+}
+
+.event-preview {
+  color: var(--text-muted) !important;
+  /* grey content preview */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.event-date {
+  color: #3b82f6 !important;
+  /* slim blue text */
+  font-weight: 300;
+  /* slim */
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Clickable Event Cards */
+.event-item.clickable-card {
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.event-item.clickable-card:hover {
+  border-left-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(13, 92, 138, 0.08);
+}
+
+.event-item.clickable-card .read-more-link {
+  transition: var(--transition-fast);
+}
+
+.event-item.clickable-card:hover .read-more-link {
+  color: var(--primary-dark) !important;
+  padding-left: 4px;
+}
